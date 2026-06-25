@@ -5,10 +5,21 @@ const listaTarefa = document.querySelector('ul');
 
 function addTarefa(){
 
-    const elementoLi = document.createElement('li');
-    elementoLi.textContent = tarefa.value;
-    listaTarefa.appendChild(elementoLi);
+    if (tarefa.value == ""){
+       return alert("Falha ao adicionar tarefa!");
+    }
+
+    const novoLi = document.createElement('li');
+    novoLi.textContent = tarefa.value;
+    listaTarefa.appendChild(novoLi);
+    alert("Tarefa adicionada com sucesso!");
 
     console.log(tarefa.value);
+
+    novoLi.addEventListener("click", () => {
+
+        novoLi.style.textDecoration = "line-through"
+
+    });
 
 }
