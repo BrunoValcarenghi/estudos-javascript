@@ -1,6 +1,6 @@
 console.log("Hello, World!");
 
-const input = document.getElementById(tarefa);
+const input = document.getElementById('tarefa');
 const listaTarefa = document.querySelector('ul');
 
 let tarefas = [];
@@ -85,6 +85,11 @@ function concluirTarefa(item, n){
     if (!item.concluido){
 
         item.concluido = true;
+
+    }
+    else{
+
+        item.concluido = false;
 
     }
     console.log("Concluiu tarefa: ", tarefas[n]);
