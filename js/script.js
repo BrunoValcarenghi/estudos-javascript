@@ -10,16 +10,37 @@ function addTarefa(){
     }
 
     const novoLi = document.createElement('li');
-    novoLi.textContent = tarefa.value;
+
+    const pTexto = document.createElement('p');
+    pTexto.onclick = concluir;
+    pTexto.textContent = tarefa.value;
+
+    const btnRemover = document.createElement('button');
+    btnRemover.onclick = remover;
+    btnRemover.textContent = "Remover";
+    
+    novoLi.appendChild(pTexto);
+    novoLi.appendChild(btnRemover);
     listaTarefa.appendChild(novoLi);
+
     alert("Tarefa adicionada com sucesso!");
 
-    console.log(tarefa.value);
+    console.log("Adicionou tarefa: " + tarefa.value);
+    
+    function concluir(){
 
-    novoLi.addEventListener("click", () => {
+        console.log("Concluiu tarefa: " + pTexto.textContent);
+        pTexto.style.textDecoration = "line-through"
 
-        novoLi.style.textDecoration = "line-through"
+    }
 
-    });
+    function remover(){
 
+        console.log("Excluiu tarefa: " + pTexto.textContent);
+        novoLi.remove();
+
+    }
+   
 }
+
+
