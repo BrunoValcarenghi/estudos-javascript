@@ -1,7 +1,10 @@
 console.log("Hello, World!");
 
+const body = document.querySelector('body')
+
 const input = document.getElementById('tarefa');
 const listaTarefa = document.querySelector('ul');
+
 const divTarefa = document.getElementById('div_tarefa');
 const divSobre = document.getElementById('div_sobre');
 
@@ -10,6 +13,8 @@ let tarefas = [];
 carregarTarefas();
 
 function carregarTarefas(){
+
+    verSobre()
 
     const dados = localStorage.getItem('tarefas');
 
@@ -23,23 +28,30 @@ function carregarTarefas(){
 
 }
 
-function ver_sobre(){
+function verSobre(){
 
     divSobre.style.display = "block";
     divTarefa.style.display = "none";
 
 }
 
-function ver_tarefa(){
+function verTarefa(){
 
     divTarefa.style.display = "block";
     divSobre.style.display = "none";
 
 }
 
+function mudarTema(){
+
+    if (body.classList == "light"){body.classList = "dark"}
+    else{body.classList = "light"}
+
+}
+
 function renderizar(){
 
-    ver_tarefa();
+    verTarefa();
 
     listaTarefa.innerHTML = "";
 

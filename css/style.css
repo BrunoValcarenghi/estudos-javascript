@@ -1,0 +1,19 @@
+*{
+
+    font-family: Verdana;
+
+}
+
+.light{
+
+    color: #222244;
+    background-color: #eeeedd;
+
+}
+
+.dark{
+
+    color: #eeeedd;
+    background-color: #222244;
+
+}
