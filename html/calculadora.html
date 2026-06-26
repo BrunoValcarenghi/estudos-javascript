@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/calculadora.js" defer></script>
+
+</head>
+<body class = "light">
+    
+    <header>
+
+        <a href="index.html">Tarefas</a>
+        <a href="calculadora.html">Calculadora</a>
+
+    </header>
+
+    <hr>
+
+    <button id="btn_tema" onclick="mudarTema()">Mudar Tema</button>
+
+    <hr>
+
+    <label for="n1">Primeiro número: </label>
+    <input type="number" id="n1" name="n1">
+    <label for="n2">Segundo número: </label>
+    <input type="number" id="n2" name="n2">
+    <br>
+
+    <button id="btn_sum">+</button>
+    <button id="btn_sub">-</button>
+    <button id="btn_mul">*</button>
+    <button id="btn_div">/</button>
+
+    <h2 id="resultado"></h2>
+
+    <ul id="historico"></ul>
+
+</body>
+</html>

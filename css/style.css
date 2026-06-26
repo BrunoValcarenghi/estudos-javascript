@@ -8,6 +8,7 @@
 
     color: #222244;
     background-color: #eeeedd;
+    a{color: #222244;}
 
 }
 
@@ -15,5 +16,6 @@
 
     color: #eeeedd;
     background-color: #222244;
+    a{color: #eeeedd;}
 
 }
