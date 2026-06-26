@@ -2,6 +2,8 @@ console.log("Hello, World!");
 
 const input = document.getElementById('tarefa');
 const listaTarefa = document.querySelector('ul');
+const divTarefa = document.getElementById('div_tarefa');
+const divSobre = document.getElementById('div_sobre');
 
 let tarefas = [];
 
@@ -21,7 +23,23 @@ function carregarTarefas(){
 
 }
 
+function ver_sobre(){
+
+    divSobre.style.display = "block";
+    divTarefa.style.display = "none";
+
+}
+
+function ver_tarefa(){
+
+    divTarefa.style.display = "block";
+    divSobre.style.display = "none";
+
+}
+
 function renderizar(){
+
+    ver_tarefa();
 
     listaTarefa.innerHTML = "";
 

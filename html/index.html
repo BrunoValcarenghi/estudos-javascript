@@ -10,16 +10,36 @@
 </head>
 <body>
 
+    <button id="btn_tarefa" onclick="ver_tarefa()">Ver Tarefa</button>
+    <button id="btn_sobre" onclick="ver_sobre()">Sobre o Sistema</button>
+
+    <hr>
     
     <label for="tarefa">Digite nova tarefa: </label>
     <input type="text" id="tarefa" name="tarefa">
-    <button id="add" onclick="addTarefa()">Adicionar</button>
+    <button id="btn_add" onclick="addTarefa()">Adicionar</button>
     
 
-    <h2>Aqui irá aparecer as tarefas adicionadas: </h2>
-    <ul id="lista_tarefa">
-            
-    </ul>
+    <div id="div_tarefa">
+        <h2>Aqui irá aparecer as tarefas adicionadas: </h2>
+        <ul id="lista_tarefa">
+                
+        </ul>
+    </div>
+
+    <div id="div_sobre">
+        
+        <h2>Sobre este sistema:</h2>
+        <p> 
+            Este é um sistema Web simples feito por questões de aprendizado. 
+            ele gerencia tarefas por meio de um array, 
+            e as exibe na tela apartir do JS. 
+            Além disso as informações são guardadas na memória do Browser,
+            apartir do LocalStorage, sendo assim, mesmo recarregando a página
+            as tarefas da lista continuam existindo
+        </p>
+
+    </div>
 
 </body>
 </html>
