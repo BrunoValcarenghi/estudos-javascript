@@ -1,4 +1,4 @@
-const input = document.getElementById('tarefa');
+const tarefa = document.getElementById('tarefa');
 const listaTarefa = document.querySelector('ul');
 
 const divTarefa = document.getElementById('div_tarefa');
@@ -10,17 +10,17 @@ carregarTarefas();
 
 function carregarTarefas(){
 
-    verSobre()
-
     const dados = localStorage.getItem('tarefas');
 
-    if (dados != "[]"){
+    if (dados != "[]" && dados){
 
         tarefas = JSON.parse(dados);
         renderizar();
         console.log("Carregou as tarefas!", dados);
 
     }
+
+    verSobre()
 
 }
 
