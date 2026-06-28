@@ -19,8 +19,7 @@ function carregarTarefas(){
         console.log("Carregou as tarefas!", dados);
 
     }
-
-    verSobre()
+    else{verSobre();}
 
 }
 
